@@ -1,0 +1,24 @@
+opam-version: "2.0"
+name: "satysfi-jsdocs-common"
+version: "0.2"
+synopsis: "Common header library for SATySFi classfiles"
+description: """Common header library for SATySFi classfiles"""
+
+maintainer: "Yasuo Ozu <yasuo@ozu.email>"
+authors: "Yasuo Ozu <yasuo@ozu.email>"
+license: "MIT"
+homepage: "https://github.com/yasuo-ozu/satysfi-jsdocs"
+bug-reports: "https://github.com/yasuo-ozu/satysfi-jsdocs/issues"
+dev-repo: "git+https://github.com/yasuo-ozu/satysfi-jsdocs.git"
+
+depends: [
+  "satysfi" {>= "0.0.5" & < "0.0.6"}
+  "satyrographos" {>= "0.0.2" & < "0.0.3"}
+]
+build: [ ]
+install: [
+  ["satyrographos" "opam" "install"
+   "--name" "jsdocs-common"
+   "--prefix" "%{prefix}%"
+   "--script" "%{build}%/Satyristes"]
+]

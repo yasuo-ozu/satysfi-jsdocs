@@ -1,0 +1,10 @@
+@require: class-jsdocs/jsdocs
+JSDocs.document (|
+	title = {test};
+	author = {Yasuo Ozu};
+	show-toc = false;
+	no-title-pageno = true;
+	show-pages = false;
+|) ?* ?* '<
+     +p {test}
+>

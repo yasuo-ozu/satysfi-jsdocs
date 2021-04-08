@@ -1,0 +1,75 @@
+;; For Satyrographos 0.0.2 series
+(version 0.0.2)
+
+(library
+  (name "jsdocs-common")
+  (version "0.0.1")
+  (sources
+    (
+     (package "jsdocs-common.satyg" "./jsdocs-common.satyg")
+    )
+  )
+  (opam "satysfi-jsdocs-common.opam")
+  (dependencies
+    ()
+  )
+  (compatibility ())
+)
+
+(library
+  (name "class-jsdocs")
+  (version "0.0.1")
+  (sources
+    (
+     (package "jsdocs.satyh" "./jsdocs.satyh")
+    )
+  )
+  (opam "satysfi-class-jsdocs.opam")
+  (dependencies
+    ()
+  )
+  (compatibility ())
+)
+
+(libraryDoc
+  (name "jsdocs-common-doc")
+  (version "0.0.1")
+  (workingDirectory "./")
+  (build
+    (
+      (satysfi "jsdocs-common-doc.saty" "-o" "jsdocs-common-doc.pdf")
+    )
+  )
+  (sources
+    (
+      (doc "jsdocs-common-doc.pdf" "./jsdocs-common-doc.pdf")
+    )
+  )
+  (opam "satysfi-jsdocs-common-doc.opam")
+  (dependencies
+    (
+    )
+  )
+)
+
+(libraryDoc
+  (name "class-jsdocs-doc")
+  (version "0.0.1")
+  (workingDirectory "./")
+  (build
+    (
+      (satysfi "class-jsdocs-doc.saty" "-o" "class-jsdocs-doc.pdf")
+    )
+  )
+  (sources
+    (
+      (doc "class-jsdocs-doc.pdf" "./class-jsdocs-doc.pdf")
+    )
+  )
+  (opam "satysfi-class-jsdocs-doc.opam")
+  (dependencies
+    (
+    )
+  )
+)
+;; vim: set expandtab ts=2 :
